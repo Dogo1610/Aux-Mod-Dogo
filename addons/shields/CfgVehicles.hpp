@@ -56,7 +56,7 @@ class CfgVehicles {
         class ACE_Actions;
         class ACE_SelfActions;
     };
-     class CLASS(3AS_Z95_VTOL_Base_F): 3AS_Z95_base {
+     class CLASS(Z95): 3AS_Z95_Republic {
         GVAR(hasShield) = TRUE;
         GVAR(health) = 25;
         GVAR(regenDelay) = SHIELD_REGEN_DELAY_DEFAULT;
