@@ -10,7 +10,7 @@ class CfgPatches {
             QUOTE(ADDON),
             QGVAR(weapons),
             QGVAR(sounds),
-            "3AS_Z95_VTOL_Base_F"
+            "3as_V19_base"
         };
         units[] = {
             QCLASS(BTLB_YWing)

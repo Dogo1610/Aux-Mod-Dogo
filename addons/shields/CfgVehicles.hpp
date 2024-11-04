@@ -51,6 +51,7 @@ class CfgVehicles {
                 modifierFunction = QUOTE(_this call FUNC(modifyInteraction));
             };
         };
+    };
     class 3AS_Z95_base: Plane_Fighter_03_dynamicLoadout_base_F {
         class ACE_Actions;
         class ACE_SelfActions;

@@ -8,7 +8,7 @@ class CfgVehicles {
         };
         class PilotCamera;
     };
-    class CLASS(V19): 3as_V19_base {
+        class CLASS(V19): 3as_V19_base {
         SCOPE_PUBLIC;
         author = AUTHOR;
 
@@ -82,6 +82,7 @@ class CfgVehicles {
             minTurn = -180;
             maxElev = 90;
             minElev = -10;
+            };
         };
     };
 };

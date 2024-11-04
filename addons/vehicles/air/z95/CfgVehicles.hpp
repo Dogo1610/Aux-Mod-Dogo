@@ -1,14 +1,15 @@
 class CfgVehicles {
-    class Plane_Fighter_03_dynamicLoadout_base_F;
-    class 3AS_Z95_base: Plane_Fighter_03_dynamicLoadout_base_F {
+
+	class 3AS_Z95_VTOL_Dynamic_Base_F;
+    class 3AS_Z95_Republic: 3AS_Z95_VTOL_Dynamic_Base_F{
         class ACE_Actions;
         class ACE_SelfActions;
         class Turrets {
             class BubbleGun;
         };
         class PilotCamera;
-    };
-    class CLASS(3AS_Z95_VTOL_Base_F): 3AS_Z95_base {
+        };
+        class CLASS(Z95): 3AS_Z95_Republic {
         SCOPE_PUBLIC;
         author = AUTHOR;
 
@@ -72,6 +73,7 @@ class CfgVehicles {
             minTurn = -180;
             maxElev = 90;
             minElev = -10;
+            };
         };
     };
 };
