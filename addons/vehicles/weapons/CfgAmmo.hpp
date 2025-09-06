@@ -4,27 +4,6 @@ class CfgAmmo {
 
     // TODO: Update flyby sounds with JLTS and/or 3AS sounds. See weapons addon for property/class names
 
-    class Sh_120mm_HEAT_MP_T_Red;
-    class CLASS(Bullet_PlasmaBlitz_HEAT): Sh_120mm_HEAT_MP_T_Red {
-        model = "\MRC\JLTS\weapons\Core\effects\laser_red.p3d";
-        effectfly = "JLTS_plasma_red";
-        coefGravity = 0.01;
-    };
-
-    class Sh_120mm_HE_Tracer_Red;
-    class CLASS(Bullet_PlasmaBlitz_HE): Sh_120mm_HE_Tracer_Red {
-        model = "\MRC\JLTS\weapons\Core\effects\laser_red.p3d";
-        effectfly = "JLTS_plasma_red";
-        coefGravity = 0.01;
-    };
-
-    class Sh_120mm_APFSDS_Tracer_Red;
-    class CLASS(Bullet_PlasmaBlitz_AT): Sh_120mm_APFSDS_Tracer_Red {
-        model = "\MRC\JLTS\weapons\Core\effects\laser_red.p3d";
-        effectfly = "JLTS_plasma_red";
-        coefGravity = 0.01;
-    };
-
     class B_127x99_Ball;
     class CLASS(Bullet_PlasmaCoax_Blue): B_127x99_Ball {
         model = "\MRC\JLTS\weapons\Core\effects\laser_blue.p3d";
@@ -43,6 +22,18 @@ class CfgAmmo {
         effectfly = "JLTS_plasma_blue";
 
         tracerScale = 1;
+    };
+
+    class 3AS_MK4ES_30mm_MP;
+    class CLASS(Bullet_Plasma_Medium_Cannon_Blue): 3AS_MK4ES_30mm_MP {
+        hit = 90;
+        caliber = 4.4;
+        typicalSpeed = 1070;
+
+        model = "\3AS\3AS_Weapons\Data\tracer_shell_blue.p3d";
+        effectfly = "3AS_PlasmaBolt_Medium_Blue_Fly";
+
+        tracerScale = 2.5;
     };
 
     class Sh_155mm_AMOS;

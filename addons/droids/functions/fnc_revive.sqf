@@ -29,7 +29,7 @@ _reviveChance = getNumber (configOf _unit >> QGVAR(reviveChance));
 
 if (_reviveUnit == "" or {_reviveChance <= 0}) exitWith {};
 
-if !(random 1 <= _reviveChance) exitWith {};
+if (random 1 <= _reviveChance) exitWith {};
 
 _reviveDelay = (random 15) max 5;
 INFO_2("Reviving unit %1 (%2)",_unit,typeOf _unit);
@@ -43,6 +43,10 @@ INFO_2("Reviving unit %1 (%2)",_unit,typeOf _unit);
     _newUnit = group _oldUnit createUnit [_reviveClass, _oldUnit, [], 0, "CAN_COLLIDE"];
     {_newUnit setObjectTextureGlobal [_forEachIndex, _x]} forEach _textures;
     switch (toLowerANSI _droidType) do {
+        case "bx": {
+            [QEGVAR(core,forceSay3D), [_newUnit, QCLASS(BX_Revive), 50]] call CBA_fnc_globalEvent;
+            deleteVehicle _oldUnit;
+            };
         case "b2": {
             _newUnit setVariable ["Droid_Health", GVAR(healthB2) / 2, true];
             if (random 1 > 0.5) then {

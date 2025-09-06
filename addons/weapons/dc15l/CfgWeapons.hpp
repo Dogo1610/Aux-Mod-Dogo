@@ -30,7 +30,7 @@ class CfgWeapons {
         fireLightDiffuse[] = {0, 0, 1};
         fireLightDuration = 0.05;
         fireLightIntensity = 0.2;
-        flashSize = 0.5;
+        flashSize = 0.2;
 
         recoil = "recoil_SMG_03";
 
@@ -45,7 +45,7 @@ class CfgWeapons {
                 class CompatibleItems {
                     ATTACHMENTS_OPTIC_LONG;
                     // Sights
-                    3as_optic_dc15l = TRUE;
+                    3AS_optic_DC15L_F = TRUE;
                 };
             };
             class PointerSlot: PointerSlot {

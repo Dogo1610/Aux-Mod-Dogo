@@ -9,7 +9,11 @@ class CfgPatches {
         requiredAddons[] = {
             QUOTE(ADDON),
             QCLASS(armor),
-            "sc_equipment"
+            "sc_equipment",
+            "tgf_helmets",
+            "tgf_armour",
+            "tgf_undersuit",
+            "tgf_backpacks"
         };
         units[] = {
             QCLASS(rdfArmor_unit_base),
@@ -42,15 +46,31 @@ class CfgPatches {
             QCLASS(rdfBackpack_medic_predef_medic),
             QCLASS(rdfBackpack_swat),
             QCLASS(rdfBackpack_swat_predef_rifleman),
-            QCLASS(rdfBackpack_swat_predef_chaingun)
+            QCLASS(rdfBackpack_swat_predef_chaingun),
+            QCLASS(Hornet_RDF),
+            QCLASS(Hornet_MG_RDF),
+            QCLASS(Hornet_AT_RDF),
+            QCLASS(Hermitaur_Class_I_RDF),
+            QCLASS(Hermitaur_Class_E_RDF),
+            QCLASS(Hermitaur_Class_M_RDF),
+            QCLASS(TX130_RDF),
+            QCLASS(TX130_RDF_Recon),
+            QCLASS(TX130_RDF_GL),
+            QCLASS(TX130_RDF_Super),
+            QCLASS(LAATi_MK1_RDF),
+            QCLASS(LAATi_MK1_Lamps_RDF),
+            QCLASS(LAATi_MK2_RDF),
+            QCLASS(LAATi_MK2_Lamps_RDF),
+            QCLASS(V19_RDF)
         };
         weapons[] = {
+            QCLASS(Arctic_Helmet_Base),
             QCLASS(rdfArmor_helmet),
             QCLASS(rdfArmor_helmet_marksman),
             QCLASS(rdfArmor_uniform),
             QCLASS(rdfArmor_vest_light),
             QCLASS(rdfArmor_vest_medium),
-            QCLASS(rdfArmor_vest_swat)
+            QCLASS(rdfArmor_vest_swat),
         };
         VERSION_CONFIG;
 

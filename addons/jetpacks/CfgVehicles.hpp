@@ -45,10 +45,10 @@ class CfgVehicles {
     class CLASS(resupply_jetpackFuel): Land_WaterTank_F {
         SCOPE_PUBLIC;
         author = AUTHOR;
-        displayName = "Jetpack Fuel Tank";
+        displayName = "16: Jetpack Fuel Tank";
 
-        editorCategory = QEDCAT(objects);
-        editorSubcategory = QEDSUBCAT(resupply);
+        editorCategory = QEDCAT(Objects);
+        editorSubcategory = QEDSUBCAT(Resupply);
         editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Land_WaterTank_F.jpg";
 
         model = "\A3\Structures_F\Items\Vessels\WaterTank_F.p3d";

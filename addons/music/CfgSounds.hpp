@@ -26,5 +26,8 @@ class CfgSounds {
     SOUND(PokeVillage,"[KC] Poke Village Theme","Poke Village Theme");
     SOUND(Droid_Marching,"[KC] CIS Droid March","CIS Droid March");
     SOUND(Godzilla_Roar,"[KC] Godzilla Roar","Godzilla Roar");
-
+    SOUND(Order_66,"[KC] Execute Order 66","Execute Order 66");
+    SOUND(Liberty,"[KC] RDF Anthem Radio","RDF Anthem Radio");
+    SOUND(Liberty_Anthem,"[KC] RDF Anthem","RDF Anthem");
+    SOUND(Rural_Music,"[KC] RDF Anthem","El Workers");
 };

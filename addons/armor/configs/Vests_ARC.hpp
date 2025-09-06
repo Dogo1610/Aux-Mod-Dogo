@@ -1,33 +1,51 @@
 class CLASS(Vest_ARC): CLASS(Vest_Basic) {
     displayName = "[KC] SF ARC Vest";
 
-    model = "\SWLB_clones\SWLB_clone_arc_armor.p3d";
+    model = "\ls\core\addons\characters_clone_legacy\vests\arc\ls_gar_arc_vest.p3d";
     hiddenSelections[] = {"camo1", "camo2"};
     hiddenSelectionsTextures[] = {
         QPATHTOF(data\vests\arc\ARC_camo1_co.paa),                 // Chestplate
         QPATHTOF(data\vests\infantry\officer\Officer_camo1_co.paa) // Kama and Pauldron
     };
-    picture = "\SWLB_clones\data\ui\icon_SWLB_clone_arc_armor_ca.paa";
+    picture = "\ls\core\addons\characters_clone_legacy\_ui\icon_cloneVest_commander_ca.paa";
 
     class ItemInfo: ItemInfo {
-        uniformModel = "\SWLB_clones\SWLB_clone_arc_armor.p3d";
+        uniformModel = "\ls\core\addons\characters_clone_legacy\vests\arc\ls_gar_arc_vest.p3d";
         hiddenSelections[] = {"camo1", "camo2"};
         containerClass = "Supply200";
 
-        class HitpointsProtectionInfo {
-            class Arms {
+        class HitpointsProtectionInfo
+        {
+            class Legs
+            {
+                hitpointName = "HitLegs";
+                armor = 25;
+                passThrough = 0.1;
+            };
+            class Arms
+            {
                 hitpointName = "HitArms";
-                armor = 20;
-                passThrough = 0.2;
+                armor = 25;
+                passThrough = 0.1;
+            };
+            class Abdomen {
+                hitpointName = "HitAbdomen";
+                armor = 40;
+                passThrough = 0.1;
+            };
+            class Body {
+                hitpointName = "HitBody";
+                armor = 40;
+                passThrough = 0.1;
             };
             class Chest {
                 hitpointName = "HitChest";
-                armor = 25;
-                PassThrough = 0.1;
+                armor = 40;
+                passThrough = 0.1;
             };
-            class Legs {
-                hitpointName = "HitLegs";
-                armor = 20;
+            class Diaphragm {
+                hitpointName = "HitDiaphragm";
+                armor = 40;
                 passThrough = 0.1;
             };
         };
@@ -50,9 +68,24 @@ class CLASS(Vest_ARC_NightShade): CLASS(Vest_ARC) {
     };
 };
 
+class CLASS(Vest_ARC_Phase1Geo_Enlisted): CLASS(Vest_ARC) {
+    displayName = "[KC] SF ARC GEO 01 (Enlisted)";
+    hiddenSelectionsTextures[] = {
+        "",
+        QPATHTOF(data\vests\arc\Enlisted_P1_camo2_co.paa)
+    };
+};
+
+class CLASS(Vest_ARC_Phase1Geo_NCO): CLASS(Vest_ARC) {
+    displayName = "[KC] SF ARC GEO 02 (NCO)";
+    hiddenSelectionsTextures[] = {
+        "",
+        QPATHTOF(data\vests\arc\NCO_P1_camo2_co.paa)
+    };
+};
 
 class CLASS(Vest_ARC_Phase1Geo_Officer): CLASS(Vest_ARC) {
-    displayName = "[KC] SF ARC GEO 01 (Officer)";
+    displayName = "[KC] SF ARC GEO 03 (Officer)";
     hiddenSelectionsTextures[] = {
         "",
         QPATHTOF(data\vests\arc\LT_P1_camo2_co.paa)
@@ -60,28 +93,44 @@ class CLASS(Vest_ARC_Phase1Geo_Officer): CLASS(Vest_ARC) {
 };
 
 class CLASS(Vest_ARC_Phase1Geo_Captain): CLASS(Vest_ARC) {
-    displayName = "[KC] SF ARC GEO 02 (Captain)";
+    displayName = "[KC] SF ARC GEO 04 (Captain)";
     hiddenSelectionsTextures[] = {
         "",
         QPATHTOF(data\vests\arc\CAP_P1_camo2_co.paa)
     };
 };
 
+class CLASS(Vest_ARC_Phase1Geo_Major): CLASS(Vest_ARC) {
+    displayName = "[KC] SF ARC GEO 05 (Major)";
+    hiddenSelectionsTextures[] = {
+        "",
+        QPATHTOF(data\vests\arc\MAJ_P1_camo2_co.paa)
+    };
+};
+
+class CLASS(Vest_ARC_Phase1Geo_Commander): CLASS(Vest_ARC) {
+    displayName = "[KC] SF ARC GEO 06 (Comander)";
+    hiddenSelectionsTextures[] = {
+        "",
+        QPATHTOF(data\vests\arc\CMDR_P1_camo2_co.paa)
+    };
+};
+
 class CLASS(Vest_ARC_v2): CLASS(Vest_ARC) {
     displayName = "[KC] SF ARC Vest (v2)";
 
-    model = "\SWLB_CEE\data\SWLB_CEE_Recon_Force_Commander.p3d";
+    model = "\ls\core\addons\characters_clone_legacy\vests\forceRecon\ls_gar_forceReconCommander_vest.p3d";
     hiddenSelections[] = {"camo1", "camo2", "camo3", "camo4"};
     hiddenSelectionsTextures[] = {
-        "\SWLB_clones\data\light_accessories_co.paa",               // Suspenders
+        "\ls\core\addons\characters_clone_legacy\vests\common\light\light_accessories_co.paa",               // Suspenders
         QPATHTOF(data\vests\infantry\officer\Officer_camo1_co.paa), // Pauldron
-        "\SWLB_clones\data\light_accessories_co.paa",               // Chest Strap
+        "\ls\core\addons\characters_clone_legacy\vests\common\heavy\heavy_accessories_co.paa",               // Chest Strap
         QPATHTOF(data\vests\infantry\officer\Officer_camo1_co.paa)  // Kama
     };
-    picture = "\SWLB_clones\data\ui\icon_SWLB_clone_officer_armor_ca.paa";
+    picture = "\ls\core\addons\characters_clone_legacy\_ui\icon_cloneVest_officer_ca.paa";
 
     class ItemInfo: ItemInfo {
-        uniformModel = "\SWLB_CEE\data\SWLB_CEE_Recon_Force_Commander.p3d";
+        uniformModel = "\ls\core\addons\characters_clone_legacy\vests\forceRecon\ls_gar_forceReconCommander_vest.p3d";
         hiddenSelections[] = {"camo1", "camo2", "camo3", "camo4"};
     };
 };

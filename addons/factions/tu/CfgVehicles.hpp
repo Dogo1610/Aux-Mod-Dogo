@@ -131,15 +131,15 @@ class CfgVehicles {
     };
 
     class CLASS(TU_Unit_HeavyGunner): CLASS(TU_Unit_Rifleman) {
-        displayName = "Heavy Gunner";
+        displayName = "Heavy Assault (Z6)";
         editorPreview = EDITOR_PREVIEW(TU_Unit_HeavyGunner);
         icon = "iconManMG";
 
         weapons[] = {QCLASS(Z6), "", "Throw", "Put"};
         respawnWeapons[] = {QCLASS(Z6), "", "Throw", "Put"};
 
-        magazines[] = {QCLASS(Mag_300Rnd_Z6_Red)};
-        respawnMagazines[] = {QCLASS(Mag_300Rnd_Z6_Red)};
+        magazines[] = {QCLASS(Mag_400Rnd_Z6_Red)};
+        respawnMagazines[] = {QCLASS(Mag_400Rnd_Z6_Red)};
 
         linkedItems[] = {QCLASS(TU_Helmet_Assault), QCLASS(TU_Vest_AssaultHeavy), LINKED_ITEMS_RADIO};
         respawnLinkedItems[] = {QCLASS(TU_Helmet_Assault), QCLASS(TU_Vest_AssaultHeavy), LINKED_ITEMS_RADIO};
@@ -509,16 +509,20 @@ class CfgVehicles {
 
         side = OPFOR;
         faction = QFACTION(TU);
-        editorPreview = EEDITOR_PREVIEW(vehicles\air\vespoid,Vespoid_Tan);
+        editorPreview = EEDITOR_PREVIEW(vehicles\air\vespoid,Vespoid_TU);
 
         crew = QCLASS(TU_Unit_Rifleman);
         typicalCargo[] = {QCLASS(TU_Unit_Rifleman)};
+        hiddenSelections[] = {"camo1","camo2","camo3","camoGlass","camoGlassPilot","camoDecal"};
         hiddenSelectionsTextures[] = {
-            "\OPTRE_Vehicles_Air\Falcon\data\Tan\Falcon_Main_co.paa",
-            "\OPTRE_Vehicles_Air\Falcon\data\Tan\Falcon_Attachments_co.paa",
-            "\OPTRE_Vehicles_Air\Falcon\data\Falcon_Interior_co.paa"
+            QPATHTOEF(vehicles,air\vespoid\data\textures\TU_Falcon_Main_co.paa),
+            QPATHTOEF(vehicles,air\vespoid\data\textures\TU_Falcon_Attachments_co.paa),
+            QPATHTOEF(vehicles,air\vespoid\data\textures\TU_Falcon_Interior_co.paa),
+            "\optre_vehicles_air\falcon\data\falcon_glass_ca.paa",
+            "\optre_vehicles_air\falcon\data\falcon_glass_ca.paa",
+            QPATHTOEF(vehicles,air\vespoid\data\textures\Falcon_Decal_ca.paa)
         };
-        textureList[] = {"TechnoUnion", 0, "EPF", 1};
+        textureList[] = {"TechnoUnion", 1, "EPF", 0, "BS", 0};
     };
 
     class CLASS(Vespoid_Armed_Base);
@@ -527,10 +531,20 @@ class CfgVehicles {
 
         side = OPFOR;
         faction = QFACTION(TU);
-        editorPreview = EEDITOR_PREVIEW(vehicles\air\vespoid,Vespoid_Armed_Tan);
+        editorPreview = EEDITOR_PREVIEW(vehicles\air\vespoid,Vespoid_Armed_TU);
 
         crew = QCLASS(TU_Unit_Rifleman);
         typicalCargo[] = {QCLASS(TU_Unit_Rifleman)};
+        hiddenSelections[] = {"camo1","camo2","camo3","camoGlass","camoGlassPilot","camoDecal"};
+        hiddenSelectionsTextures[] = {
+            QPATHTOEF(vehicles,air\vespoid\data\textures\TU_Falcon_Main_co.paa),
+            QPATHTOEF(vehicles,air\vespoid\data\textures\TU_Falcon_Attachments_co.paa),
+            QPATHTOEF(vehicles,air\vespoid\data\textures\TU_Falcon_Interior_co.paa),
+            "\optre_vehicles_air\falcon\data\falcon_glass_ca.paa",
+            "\optre_vehicles_air\falcon\data\falcon_glass_ca.paa",
+            QPATHTOEF(vehicles,air\vespoid\data\textures\Falcon_Decal_ca.paa)
+        };
+        textureList[] = {"TechnoUnion", 1, "EPF", 0, "BS", 0};
     };
 
     class CLASS(Rathian_CAP_Base);

@@ -22,6 +22,8 @@ class CfgVehicles {
         crew = QCLASS(Unit_Phase2_Tanker_CT);
         typicalCargo[] = {QCLASS(Unit_Phase2_Tanker_CT)};
 
+        ace_cargo_space = 4;
+
         EGVAR(weapons,hasVehicleEMP) = TRUE;
         EGVAR(weapons,vehicleEMPCooldown) = 15;
         EGVAR(weapons,empRadiusDroid) = EMP_RADIUS_DROID_DEFAULT;
@@ -99,7 +101,10 @@ class CfgVehicles {
                 };
             };
         };
-
+        class EventHandlers
+        {
+            init = "(_this # 0) setVariable [""BNA_KC_vehicles_DeploySquadShield"", false,true];";
+        };
         class UserActions {
             class ActivateEMP {
                 displayName = "<t font='RobotoCondensedBold'>Activate EMP</t>";
@@ -138,6 +143,6 @@ class CfgVehicles {
             };
         };
 
-        INVENTORY_VEHICLE_BASE(2);
+        INVENTORY_VEHICLE_HYDRA(2);
     };
 };

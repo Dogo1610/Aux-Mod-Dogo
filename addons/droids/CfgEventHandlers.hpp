@@ -27,6 +27,11 @@ class Extended_InitPost_EventHandlers {
             init = "";
         };
     };
+    class CLASS(CIS_Unit_Droid_B2_Aqua) {
+        class GVAR(init) {
+            init = "";
+        };
+    };
 };
 
 class Extended_Killed_EventHandlers {
@@ -38,6 +43,11 @@ class Extended_Killed_EventHandlers {
     class CLASS(CIS_Unit_Droid_B2) {
         class GVAR(revive) {
             killed = QUOTE([ARR_2(_this#0,'b2')] call FUNC(revive));
+        };
+    };
+    class CLASS(CIS_Unit_Droid_BX) {
+        class GVAR(revive) {
+            killed = QUOTE([ARR_2(_this#0,'bx')] call FUNC(revive));
         };
     };
     class 3AS_Deka_Static_Base {

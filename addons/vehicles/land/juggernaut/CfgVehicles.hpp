@@ -1,7 +1,6 @@
 class CfgVehicles {
     class Car_F;
     class Wheeled_Apc_F: Car_F {
-        class HitPoints;
     };
     class 3AS_Jug_base_F: Wheeled_Apc_F {
         // class HitPoints: HitPoints {
@@ -122,7 +121,6 @@ class CfgVehicles {
         class ACE_SelfActions: ACE_SelfActions {
             AI_CREW_SPAWNER;
         };
-
         class UserActions: UserActions {
             class Crow_Nest_Up: Crow_Nest_Up {
                 condition = QUOTE(this animationSourcePhase 'crownest' == 0 and alive this and ace_player == this turretUnit [4]);

@@ -20,6 +20,7 @@ class CfgMusic {
     MUSIC(AoT_BigGirl,"[AoT] You See BIG GIRL",359,Anime);
     MUSIC(AoT_SymphonicSuite,"[AoT] Symphonic Suite",313,Anime);
     MUSIC(AoT_Vogel,"[AoT] Vogel im Käfig",380,Anime);
+    MUSIC(AoT_AttackOnTitan,"[AoT] Attack on Titan",256,Anime);
 
     // Avenged Sevenfold
     MUSIC(AS_ShepherdOfFire,"[AS] Shepherd of Fire",319,Other);
@@ -74,17 +75,20 @@ class CfgMusic {
     MUSIC(MG_RulesOfNature,"[MG] Rules of Nature",150,VideoGames);
     MUSIC(MG_TheOnlyThingIKnowForReal,"[MG] The Only Thing I Know For Real",150,VideoGames);
     MUSIC(MG_TheStainsOfTime,"[MG] The Stains of Time",130,VideoGames);
-    MUSIC(MG_SlipperyLittleBastad,"[MG] Slippery Little Bastard",141,VideoGames);
+    MUSIC(MG_SlipperyLittleBastard,"[MG] Slippery Little Bastard",129,VideoGames);
     MUSIC(MG_TheSenatorsArrival,"[MG] The Senator's Arrival",34,VideoGames);
 
     // Monster Hunter
     MUSIC(MH_FatalisMedley,"[MH] Fatalis Medley",1093,VideoGames);
     MUSIC(MHW_Fatalis_Theme,"[MH] Fatalis Theme",162,VideoGames);
+    MUSIC(MH_POAH,"[MH] Proof of a Hero",142,VideoGames);
 
     // Modern Warfare
     MUSIC(MW_ThemeCalm,"[MW] Theme (Calm)",206,VideoGames);
     MUSIC(MW_ThemeHopeful,"[MW] Theme (Hopeful)",167,VideoGames);
     MUSIC(MW_ThemeHype,"[MW] Theme (Hype)",336,VideoGames);
+    MUSIC(MW_Sheperds_Betrayal,"[MW] Sheperds Betrayal",132,VideoGames);
+    MUSIC(MW_Extraction,"[MW] Extraction",215,VideoGames);
 
     // One Piece
     MUSIC(OP_Fujitora,"[OP] Fujitora's Theme",67,Anime);
@@ -137,6 +141,12 @@ class CfgMusic {
     MUSIC(SW_UmbaraLanding,"[SW] Umbara Landing",202,StarWars);
     MUSIC(SW_Felucia_Theme,"[SW] Battle of Felucia",204,StarWars);
     MUSIC(Thrawn_Theme,"[SW] Thrawn Theme",336,SFX);
+    MUSIC(RC_Theme,"[SW] Clone Commando Theme",239,StarWars);
+    MUSIC(RC_Theme_2,"[SW] Clone Commando Theme 2",192,StarWars);
+    MUSIC(CW_Ground_Ambience,"[SW] Clone Ground Ambience",3735,StarWars);
+    MUSIC(CW_Venator_Ambience,"[SW] Venator Ambience",2499,StarWars);
+    MUSIC(SW_Kylo_Theme,"[SW] Kylo Theme",297,StarWars);
+
 
     // Transformers
     MUSIC(TF_ArrivalToEarth,"[TF] Arrival To Earth",315,Other);
@@ -146,6 +156,11 @@ class CfgMusic {
     MUSIC(TF_Nest,"[TF] Nest",124,Other);
     MUSIC(TF_TheAllSpark,"[TF] The All Spark",214,Other);
     MUSIC(EPF_Anthem,"EPF Anthem",228,Other);
+    MUSIC(TRN_Battle,"[TF] Battle (Charging/Hopefull)",220,Other);
+    MUSIC(TF_Plan,"[TF] There is no Plan (Hopeless)",217,Other);
+    MUSIC(TF_Shockwave,"[TF] Shockwave (Impending Doom)",121,Other);
+    MUSIC(TF_No_Prisoners,"[TF] No Prisoners  (Hopeless)",212,Other);
+    MUSIC(TF_Invasion,"[TF] Invasion (Impending Doom)",265,Other);
 
     // Tron
     MUSIC(Tron_CLU,"[Tron] C.L.U",279,Other);
@@ -207,4 +222,5 @@ class CfgMusic {
     MUSIC(UNK_FatherG,"Father G",262,Other);
     MUSIC(UNK_Kraken_Theme_Short,"The Kraken Short",119,Other);
     MUSIC(UNK_Admiral_Goliath_Epic,"Admiral Goliath EPIC",388,Other);
+    MUSIC(Liberty_Anthem,"RDF Anthem",204,VideoGames);
     };

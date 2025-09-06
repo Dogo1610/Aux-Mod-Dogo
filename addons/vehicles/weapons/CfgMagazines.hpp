@@ -6,37 +6,6 @@ class CfgMagazines {
         mass = 8;
     };
 
-    class CLASS(Mag_20Rnd_Cannon_Blitz_HEAT): CLASS(Mag_VehicleBase) {
-        SCOPE_PUBLIC;
-        displayName = "HEAT";
-        displayNameShort = "HEAT";
-        ammo = QCLASS(Bullet_PlasmaBlitz_HEAT);
-        count = 20;
-
-        nameSound = "cannon";
-
-        initSpeed = 1330;
-        maxLeadSpeed = 25;
-        weight = 126;
-        muzzleImpulseFactor[] = {0.5, 3};
-    };
-
-    class CLASS(Mag_20Rnd_Cannon_Blitz_HE): CLASS(Mag_20Rnd_Cannon_Blitz_HEAT) {
-        displayName = "HE";
-        displayNameShort = "HE";
-        ammo = QCLASS(Bullet_PlasmaBlitz_HE);
-
-        initSpeed = 1410;
-        muzzleImpulseFactor[] = {1, 6};
-    };
-
-    class CLASS(Mag_20Rnd_Cannon_Blitz_AT): CLASS(Mag_20Rnd_Cannon_Blitz_HEAT) {
-        displayName = "AT";
-        displayNameShort = "AT";
-        ammo = QCLASS(Bullet_PlasmaBlitz_AT);
-        initSpeed = 1750;
-    };
-
     class CLASS(Mag_100Rnd_Coax): CLASS(Mag_VehicleBase) {
         SCOPE_PUBLIC;
         ammo = QCLASS(Bullet_PlasmaCoax_Blue);
@@ -68,6 +37,31 @@ class CfgMagazines {
 
         initSpeed = 400;
         mass = 10;
+    };
+
+    class CLASS(Mag_250Rnd_Hermitaur): CLASS(Mag_VehicleBase) {
+        SCOPE_PUBLIC;
+        displayName = "Hermitaur Cannon Shells";
+        displayNameShort = "HE Rnd";
+        descriptionShort = "Plasma Shells<br/>Used In Hermitaura";
+        ammo = QCLASS(Bullet_Plasma_Medium_Cannon_Blue);
+        count = 250;
+        mass = 8;
+        initSpeed = 1070;
+    };
+
+    class CLASS(Mag_100Rnd_Gozanti): CLASS(Mag_VehicleBase) {
+        SCOPE_PUBLIC;
+        displayName = "Gozanti Mass Driver Shells";
+        displayNameShort = "AP";
+        descriptionShort = "Plasma Shells<br/>Used In Gozanti";
+        ammo = "3AS_Mass_Driver_Shell";
+        count = 100;
+        initSpeed = 1680;
+        maxLeadSpeed = 250;
+        tracersEvery = 1;
+        nameSound = "cannon";
+        muzzleImpulseFactor[] = {0.5,3};
     };
 
     class CLASS(Mag_6Rnd_Mortar_82mm_HE): CLASS(Mag_VehicleBase) {

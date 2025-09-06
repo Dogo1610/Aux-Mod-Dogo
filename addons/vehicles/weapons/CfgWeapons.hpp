@@ -1,29 +1,9 @@
 class CfgWeapons {
     class CannonCore;
-    class cannon_120mm: CannonCore {
-        class player;
-    };
-    class CLASS(Cannon_Blitz): cannon_120mm {
-        displayName = "Main Cannon";
-        magazines[] = {
-            QCLASS(Mag_20Rnd_Cannon_Blitz_HEAT),
-            QCLASS(Mag_20Rnd_Cannon_Blitz_HE),
-            QCLASS(Mag_20Rnd_Cannon_Blitz_AT)
-        };
-        class player: player {
-            class StandardSound {
-                soundSetShot[] = {QCLASS(SoundSet_Cannon_Blitz_Shot)};
-            };
-        };
-    };
 
     class autocannon_Base_F;
     class autocannon_40mm_CTWS: autocannon_Base_F {
         class player;
-        class close;
-        class short;
-        class medium;
-        class far;
     };
     class CLASS(Autocannon_Reek): autocannon_40mm_CTWS {
         muzzles[] = {"HE", "AP"};
@@ -254,12 +234,30 @@ class CfgWeapons {
         };
     };
 
+    class 3AS_MK4ES_Medium_Cannon;
+    class CLASS(Hermitaur_Medium_Cannon): 3AS_MK4ES_Medium_Cannon {
+        displayName = "Hermitaur Medium Cannon";
+        magazines[] = {
+            QCLASS(Mag_250Rnd_Hermitaur)
+        };
+    };
+
     class 3AS_Mass_Driver_Cannon;
     class CLASS(Cannon_ATTE_MassDriver): 3AS_Mass_Driver_Cannon {
         displayName = "Mass Driver Cannon";
         magazines[] = {
             "3AS_30Rnd_Mass_Driver_shells",
             "3AS_10Rnd_Siege_Cannon_HHE_shells"
+        };
+    };
+
+    class CLASS(Cannon_Gozanti_MassDriver): 3AS_Mass_Driver_Cannon {
+        displayName = "Mass Driver Cannon";
+        reloadTime = 2;
+        magazineReloadTime = 4;
+        canLock = 1;
+        magazines[] = {
+            QCLASS(Mag_100Rnd_Gozanti)
         };
     };
 
@@ -356,7 +354,7 @@ class CfgWeapons {
             QPATHTOF(sounds\data\audio\juggernaut\Horn0.ogg),
             5,
             1,
-            500
+            1000
         };
     };
 

@@ -81,10 +81,20 @@ class CfgVehicles {
                 factions[] = {QFACTION(EPF)};
                 textures[] = {"\3AS\3AS_AAT\data\Green_AAT_CO.paa"};
             };
+            class BlackSuns: CIS {
+                displayName = "Black Suns Crime Syndicate";
+                factions[] = {QFACTION(BS)};
+                textures[] = {"\3AS\3AS_AAT\data\Tan_AAT_CO.paa"};
+            };
             class Red: CIS {
                 displayName = "Red";
                 factions[] = {};
                 textures[] = {"\3AS\3AS_AAT\data\Red_AAT_CO.paa"};
+            };
+            class KC: Red {
+                displayName = "KC";
+                factions[] = {QFACTION(KC)};
+                textures[] = {QPATHTOF(land\aat\data\textures\KC_AAT_co.paa)};
             };
             class Desert: Red {
                 displayName = "Camo - Desert";
@@ -117,6 +127,7 @@ class CfgVehicles {
         };
 
         class ACE_SelfActions: ACE_SelfActions {
+            AI_CREW_SPAWNER;
         };
 
         class Turrets: Turrets {
@@ -163,6 +174,34 @@ class CfgVehicles {
                 weapon = "3AS_AAT_Repeater";
             };
         };
+    };
+
+    class CLASS(AAT_captured): CLASS(AAT_Base) {
+    side = BLUFOR;
+    faction = QFACTION(KC);
+    textureList[] = {
+        "CIS", 0,
+        "TradeFederation", 0,
+        "EPF", 0,
+        "Red", 0,
+        "KC", 1,
+        "Desert", 0,
+        "Geonosis", 0,
+        "Woodland", 0,
+        "Tropical", 0,
+        "Arid", 0,
+        "Winter", 0,
+        "Aqua", 0
+    };
+
+        editorPreview = EEDITOR_PREVIEW(vehicles\land\SUBCOMPONENT,AAT_Blue);
+
+        displayName = "Captured AAT";
+        SCOPE_PUBLIC;
+
+        hiddenSelectionsTextures[] = {
+            QPATHTOF(land\aat\data\textures\KC_AAT_co.paa)};
+
     };
 
     class CLASS(AAT_Heavy_Base): CLASS(AAT_Base) {
@@ -274,6 +313,26 @@ class CfgVehicles {
             class HitAmmo_R: HitEngine {
                 name = "ammo_r_hit";
             };
+        };
+    };
+
+    class CLASS(Captured_AAT_King): CLASS(AAT_King_Base) {
+        SCOPE_PUBLIC;
+        author = AUTHOR;
+
+        faction = QFACTION(KC);
+        editorSubcategory = QEDSUBCAT(Tanks);
+        editorPreview = EEDITOR_PREVIEW(vehicles\land\SUBCOMPONENT,AAT_King_Base);
+        side = BLUFOR;
+        modelSides[] = {BLUFOR};
+
+        displayName = "Captured AAT (King)";
+
+        hiddenselections[] = {"body1", "body2", "gun"};
+        hiddenSelectionsTextures[] = {
+            QPATHTOF(land\aat\data\textures\KC_body1_co.paa),
+            QPATHTOF(land\aat\data\textures\KC_body2_co.paa),
+            QPATHTOF(land\aat\data\textures\KC_gun_co.paa)
         };
     };
 };

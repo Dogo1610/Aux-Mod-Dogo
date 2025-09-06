@@ -11,6 +11,7 @@ class XtdGearModels {
                 changeInGame = FALSE;
                 values[] = {
                     "Alvarez",
+                    "Anvil",
                     "Axel",
                     "Bailout",
                     "Bond",
@@ -33,6 +34,7 @@ class XtdGearModels {
                     "Marge",
                     "Ox",
                     "Patriot",
+                    "Rabble",
                     "Rat",
                     "Rev",
                     "Rodger",
@@ -46,6 +48,7 @@ class XtdGearModels {
                 };
 
                 class Alvarez { label = "Alvarez"; };
+                class Anvil { label = "Anvil"; };
                 class Axel { label = "Axel"; };
                 class Bailout { label = "Bailout"; };
                 class Bond { label = "Bond"; };
@@ -67,6 +70,7 @@ class XtdGearModels {
                 class Marge { label = "Marge"; };
                 class Ox { label = "Ox"; };
                 class Patriot { label = "Patriot"; };
+                class Rabble { label = "Rabble"; };
                 class Rat { label = "Rat"; };
                 class Rev { label = "Rev"; };
                 class Rodger { label = "Rodger"; };
@@ -150,6 +154,7 @@ class XtdGearModels {
                     "Lou",
                     "Ox",
                     "Patriot",
+                    "Rabble",
                     "Rodger",
                     "Sage",
                     "Scvrpio",
@@ -190,6 +195,7 @@ class XtdGearModels {
                 class Lou { label = "Lou"; };
                 class Ox { label = "Ox"; };
                 class Patriot { label = "Patriot"; };
+                class Rabble { label = "Rabble"; };
                 class Rodger { label = "Rodger"; };
                 class Sage { label = "Sage"; };
                 class Scvrpio { label = "Scvrpio"; };
@@ -200,6 +206,7 @@ class XtdGearModels {
                 class Sytha { label = "Sytha"; };
                 class Talyn { label = "Talyn"; };
                 class Tugz { label = "Tugz"; };
+                class Turtle { label = "Turtle"; };
                 class Vortex { label = "Vortex"; };
                 class Weenie { label = "Weenie"; };
                 class Woods { label = "Woods"; };
@@ -300,7 +307,7 @@ class XtdGearModels {
 
         class CLASS(Helmets_ARC_Custom): CLASS(Helmets_Phase1_Custom) {
             label = "Custom ARC Helmets";
-            options[] = {"custom"};
+            options[] = {"custom", "camo"};
 
             class custom {
                 label = "Custom";
@@ -388,12 +395,14 @@ class XtdGearModels {
                 alwaysSelectable = TRUE;
                 changeInGame = FALSE;
                 values[] = {
+                    "Anvil",
                     "Axel",
                     "Leon",
                     "Star",
                     "Tugz"
                 };
 
+                class Anvil { label = "Anvil"; };
                 class Axel { label = "Axel"; };
                 class Leon { label = "Leon"; };
                 class Star { label = "Star"; };
@@ -468,11 +477,13 @@ class XtdGearModels {
                 changeInGame = FALSE;
                 values[] = {
                     "Dexus",
+                    "Jaws",
                     "Joe",
                     "Keeli"
                 };
 
                 class Dexus { label = "Dexus"; };
+                class Jaws { label = "Jaws"; };
                 class Joe { label = "Joe"; };
                 class Keeli { label = "Keeli"; };
             };

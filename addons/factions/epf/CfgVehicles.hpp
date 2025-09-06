@@ -36,8 +36,8 @@ class CfgVehicles {
             "FirstAidKit"
         };
 
-        linkedItems[] = {QCLASS(EPF_Helmet), QCLASS(EPF_Vest), LINKED_ITEMS_RADIO};
-        respawnLinkedItems[] = {QCLASS(EPF_Helmet), QCLASS(EPF_Vest), LINKED_ITEMS_RADIO};
+        linkedItems[] = {QCLASS(EPF_Helmet), QCLASS(EPF_Vest), QCLASS(cloneNvg_chip), LINKED_ITEMS_RADIO};
+        respawnLinkedItems[] = {QCLASS(EPF_Helmet), QCLASS(EPF_Vest), QCLASS(cloneNvg_chip), LINKED_ITEMS_RADIO};
         backpack = QCLASS(EPF_Backpack_Predef_Rifleman);
 
         class EventHandlers;
@@ -139,8 +139,8 @@ class CfgVehicles {
         weapons[] = {QCLASS(Z6), "", "Throw", "Put"};
         respawnWeapons[] = {QCLASS(Z6), "", "Throw", "Put"};
 
-        magazines[] = {QCLASS(Mag_300Rnd_Z6_Red)};
-        respawnMagazines[] = {QCLASS(Mag_300Rnd_Z6_Red)};
+        magazines[] = {QCLASS(Mag_400Rnd_Z6_Red)};
+        respawnMagazines[] = {QCLASS(Mag_400Rnd_Z6_Red)};
 
         linkedItems[] = {QCLASS(EPF_Helmet_Assault), QCLASS(EPF_Vest_AssaultHeavy), LINKED_ITEMS_RADIO};
         respawnLinkedItems[] = {QCLASS(EPF_Helmet_Assault), QCLASS(EPF_Vest_AssaultHeavy), LINKED_ITEMS_RADIO};
@@ -535,7 +535,7 @@ class CfgVehicles {
             "\OPTRE_Vehicles_Tracked\Scorpion\data\texture\scorp_net_wood_ca.paa",
             "\OPTRE_Vehicles_Tracked\Scorpion\data\texture\mine_roller_co.paa"
         };
-        textureList[] = {"TechnoUnion", 0, "EPF", 1};
+        textureList[] = {"TechnoUnion", 0, "EPF", 1, "RDF", 0};
     };
 
     class CLASS(Conga_IFV_Base);
@@ -558,7 +558,7 @@ class CfgVehicles {
             "\OPTRE_Vehicles\Bison\data\Bison_MFCDScreens_CO.paa",
             "\OPTRE_Vehicles\Bison\data\Bison_90mm_CO.paa"
         };
-        textureList[] = {"TechnoUnion", 0, "EPF", 1};
+        textureList[] = {"TechnoUnion", 0, "EPF", 1, "RDF", 0};
     };
 
     class CLASS(Conga_MGS_Base);
@@ -581,7 +581,7 @@ class CfgVehicles {
             "\OPTRE_Vehicles\Bison\data\Bison_MFCDScreens_CO.paa",
             "\OPTRE_Vehicles\Bison\data\Bison_90mm_CO.paa"
         };
-        textureList[] = {"TechnoUnion", 0, "EPF", 1};
+        textureList[] = {"TechnoUnion", 0, "EPF", 1, "RDF", 0};
     };
 
     class CLASS(ScoutTank_Base);
@@ -668,7 +668,7 @@ class CfgVehicles {
         typicalCargo[] = {QCLASS(EPF_Unit_Rifleman)};
 
         hiddenSelectionsTextures[] = {"\OPTRE_Vehicles\Pelican\data\PelicanExterior_standard_CO.paa"};
-        textureList[] = {"TechnoUnion", 0, "EPF", 1};
+        textureList[] = {"TechnoUnion", 0, "EPF", 1, "RDF", 0};
     };
 
     class CLASS(Ogre_Armed_Base);
@@ -683,7 +683,7 @@ class CfgVehicles {
         typicalCargo[] = {QCLASS(EPF_Unit_Rifleman)};
 
         hiddenSelectionsTextures[] = {"\OPTRE_Vehicles\Pelican\data\PelicanExterior_standard_CO.paa"};
-        textureList[] = {"TechnoUnion", 0, "EPF", 1};
+        textureList[] = {"TechnoUnion", 0, "EPF", 1, "RDF", 0};
     };
 
     class CLASS(Vespoid_Base);
@@ -692,17 +692,20 @@ class CfgVehicles {
 
         side = OPFOR;
         faction = QFACTION(EPF);
-        editorPreview = EEDITOR_PREVIEW(vehicles\air\vespoid,Vespoid_Green);
+        editorPreview = EEDITOR_PREVIEW(vehicles\air\vespoid,Vespoid_EPF);
 
         crew = QCLASS(EPF_Unit_Rifleman);
         typicalCargo[] = {QCLASS(EPF_Unit_Rifleman)};
 
         hiddenSelectionsTextures[] = {
-            "\OPTRE_Vehicles_Air\Falcon\data\Green\Falcon_Main_co.paa",
-            "\OPTRE_Vehicles_Air\Falcon\data\Green\Falcon_Attachments_co.paa",
-            "\OPTRE_Vehicles_Air\Falcon\data\Falcon_Interior_co.paa"
+            QPATHTOEF(vehicles,air\vespoid\data\textures\EPF_Falcon_Main_co.paa),
+            QPATHTOEF(vehicles,air\vespoid\data\textures\EPF_Falcon_Attachments_co.paa),
+            QPATHTOEF(vehicles,air\vespoid\data\textures\EPF_Falcon_Interior_co.paa),
+            "\optre_vehicles_air\falcon\data\falcon_glass_ca.paa",
+            "\optre_vehicles_air\falcon\data\falcon_glass_ca.paa",
+            QPATHTOEF(vehicles,air\vespoid\data\textures\Falcon_Decal_ca.paa)
         };
-        textureList[] = {"TechnoUnion", 0, "EPF", 1};
+        textureList[] = {"TechnoUnion", 0, "EPF", 1, "BS", 0};
     };
 
     class CLASS(Vespoid_Armed_Base);
@@ -711,17 +714,20 @@ class CfgVehicles {
 
         side = OPFOR;
         faction = QFACTION(EPF);
-        editorPreview = EEDITOR_PREVIEW(vehicles\air\vespoid,Vespoid_Armed_Green);
+        editorPreview = EEDITOR_PREVIEW(vehicles\air\vespoid,Vespoid_Armed_EPF);
 
         crew = QCLASS(EPF_Unit_Rifleman);
         typicalCargo[] = {QCLASS(EPF_Unit_Rifleman)};
 
         hiddenSelectionsTextures[] = {
-            "\OPTRE_Vehicles_Air\Falcon\data\Green\Falcon_Main_co.paa",
-            "\OPTRE_Vehicles_Air\Falcon\data\Green\Falcon_Attachments_co.paa",
-            "\OPTRE_Vehicles_Air\Falcon\data\Falcon_Interior_co.paa"
+            QPATHTOEF(vehicles,air\vespoid\data\textures\EPF_Falcon_Main_co.paa),
+            QPATHTOEF(vehicles,air\vespoid\data\textures\EPF_Falcon_Attachments_co.paa),
+            QPATHTOEF(vehicles,air\vespoid\data\textures\EPF_Falcon_Interior_co.paa),
+            "\optre_vehicles_air\falcon\data\falcon_glass_ca.paa",
+            "\optre_vehicles_air\falcon\data\falcon_glass_ca.paa",
+            QPATHTOEF(vehicles,air\vespoid\data\textures\Falcon_Decal_ca.paa)
         };
-        textureList[] = {"TechnoUnion", 0, "EPF", 1};
+        textureList[] = {"TechnoUnion", 0, "EPF", 1, "BS", 0};
     };
 
     class CLASS(Rathian_CAP_Base);
@@ -750,7 +756,7 @@ class CfgVehicles {
         crew = QCLASS(EPF_Unit_Rifleman);
         typicalCargo[] = {QCLASS(EPF_Unit_Rifleman)};
 
-        hiddenSelectionsTextures[] = {"\OPTRE_Vehicles_Air\hornet\data\hornet_hull_standard_co.paa"};
+        hiddenSelectionsTextures[] = {"\OPTRE_Vehicles_Air\hornet\data\hornet_hull_black_co.paa"};
         textureList[] = {"TechnoUnion", 0, "EPF", 1};
     };
 };

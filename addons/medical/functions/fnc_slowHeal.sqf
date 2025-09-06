@@ -32,7 +32,7 @@ TRACE_2("fnc_slowHeal",_unit,_rate);
 if (
     isNull _unit or {
         !(_unit isKindOf "CAManBase") or
-        !(_unit getVariable [QGVAR(slowHealHandler), -1] isEqualTo -1)
+        (_unit getVariable [QGVAR(slowHealHandler), -1] isNotEqualTo -1)
     }
 ) exitWith {-1};
 
@@ -100,8 +100,8 @@ _exitCode = {
     params ["_handle", "_unit"];
     INFO_2("Slow Healer %1 | (Exit) Removing handler from %2",_handle,_unit);
     ["ace_common_displayTextStructured", ["Finished recieving treatment.", 1.5, _unit], _unit] call CBA_fnc_targetEvent;
-    _unit setVariable [QGVAR(slowHealHandler), nil];
-    _unit setVariable [QGVAR(canBeHealed), nil];
+    _unit setVariable [QGVAR(slowHealHandler), nil, true];
+    _unit setVariable [QGVAR(canBeHealed), nil, true];
 };
 
 _healHandler = [

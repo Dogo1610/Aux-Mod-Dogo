@@ -135,6 +135,23 @@ class CLASS(CIS_Backpack_Droid_B1_Antenna_Training): CLASS(CIS_Backpack_Droid_B1
     };
 };
 
+class CLASS(Backpack_Droid_B1): CLASS(CIS_Backpack_Droid_B1) {
+    displayName = "[KC] Battle Droid Backpack";
+    hiddenSelectionsTextures[] = {QPATHTOF(cis\data\textures\backpacks\KC_B1_co.paa)};
+    side = BLUFOR;
+    modelSides[] = {BLUFOR};
+    maximumLoad = 1200;
+
+    // TFAR Long Range
+        tf_hasLRradio = TRUE;
+        tf_range = 25000;
+
+        tf_dialog = "ls_radios_cloneLR";
+        tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
+        tf_encryptionCode = "tf_west_radio_code";
+        tf_subtype = "digital_lr";
+};
+
 class CLASS(CIS_Jetpack_Droid_B1): CLASS(CIS_Backpack_Droid_B1) {
     displayName = "[CIS] Battle Droid Jetpack";
 
@@ -169,10 +186,25 @@ class CLASS(CIS_Jetpack_Droid_B1): CLASS(CIS_Backpack_Droid_B1) {
 };
 
 class CLASS(CIS_Jetpack_Droid_B1_Rocket): CLASS(CIS_Jetpack_Droid_B1) {
-    displayName = "[KC] Battle Droid Jetpack (Rocket)";
+    displayName = "[CIS] Battle Droid Jetpack (Rocket)";
     hiddenSelectionsTextures[] = {"\MRC\JLTS\characters\DroidArmor\data\b1_jetpack_rocket_co.paa"};
 
     class XtdGearInfo: XtdGearInfo {
         type = "Rocket";
     };
+};
+
+class CLASS(Jetpack_Droid_B1): CLASS(CIS_Jetpack_Droid_B1) {
+    displayName = "[KC] Battle Droid Jetpack";
+    hiddenSelectionsTextures[] = {QPATHTOF(cis\data\textures\backpacks\KC_B1_Jetpack_co.paa)};
+    maximumLoad = 1200;
+
+    // TFAR Long Range
+        tf_hasLRradio = TRUE;
+        tf_range = 25000;
+
+        tf_dialog = "ls_radios_cloneLR";
+        tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
+        tf_encryptionCode = "tf_west_radio_code";
+        tf_subtype = "digital_lr";
 };

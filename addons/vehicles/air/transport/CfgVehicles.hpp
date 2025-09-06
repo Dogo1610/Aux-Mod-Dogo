@@ -1,9 +1,20 @@
+class ls_impulsor_base;
+
 class CfgVehicles {
     class 3AS_Republic_Transport_01_Base;
     class 3AS_Republic_Transport_01: 3AS_Republic_Transport_01_Base {
         class ACE_SelfActions;
     };
     class CLASS(RepublicTransport): 3AS_Republic_Transport_01 {
+        class LS_Impulsor: ls_impulsor_base{
+            enabled = 1; // 0-Disabled, 1-Enabled
+            speed = 400; // Speed in km/h
+            fuelDrain = 0; // Percent of fuel used every 1/2 seconds
+            overchargeSpeed = 800; // Same but for overcharge
+            overchargeFuelDrain = 0; // Same but for overcharge
+            // Time in seconds before overcharge can be used after turning it off
+            overchargeCooldown = 05;
+        };
         SCOPE_PUBLIC;
         author = AUTHOR;
 
@@ -15,12 +26,16 @@ class CfgVehicles {
         crew = QCLASS(Unit_Phase2_CXA);
         typicalCargo[] = {QCLASS(Unit_Phase2_CXA)};
 
-        weapons[] = {QCLASS(Cannon_ARC_Light), "ls_weapon_CMFlareLauncher", "Laserdesignator_pilotCamera"};
+        weapons[] = {QCLASS(Cannon_ARC_Light),"CMFlareLauncher","Laserdesignator_pilotCamera"};
         magazines[] = {
             "3as_ARC_500Rnd_Light_Shells",
             "3as_ARC_500Rnd_Light_Shells",
-            "ls_mag_300Rnd_CMFlareChaff_blue",
-            "Laserbatteries"
+            "120Rnd_CMFlare_Chaff_Magazine",
+            "Laserbatteries",
+            "120Rnd_CMFlare_Chaff_Magazine",
+            "120Rnd_CMFlare_Chaff_Magazine",
+            "120Rnd_CMFlare_Chaff_Magazine",
+            "120Rnd_CMFlare_Chaff_Magazine"
         };
 
         hiddenSelectionsTextures[] = {

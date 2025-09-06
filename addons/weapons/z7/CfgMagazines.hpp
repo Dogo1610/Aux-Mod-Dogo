@@ -6,12 +6,12 @@ class CfgMagazines {
         displayNameShort = "High Energy";
         descriptionShort = "Energy Cell Drum Magazine<br/>Rounds: 800<br/>Used In: Z-7";
 
-        model = "\SWLW_clones\machineguns\Z7\Z7_mag.p3d";
-        picture = "\SWLW_clones\machineguns\Z7\data\ui\SWLW_Z7_mag_ui.paa";
+        model = "\ls\core\addons\weapons_zseries\z7\ls_magazine_z7.p3d";
+        picture = "\ls\core\addons\weapons_zseries\data\ui\z7_mag_ui_ca.paa";
 
         allowedSlots[] = {TYPE_BACKPACK};
 
-        initSpeed = 200;
+        initSpeed = 900;
         type = AMMO_USAGE_ARMORED_VEHICLES;
 
         ammo = QCLASS(Bullet_Plasma_Z7);
@@ -24,12 +24,12 @@ class CfgMagazines {
         displayNameShort = "High Energy";
         descriptionShort = "Energy Cell Drum Magazine<br/>Rounds: 800<br/>Used In: Z-7";
 
-        model = "\SWLW_clones\machineguns\Z7\Z7_mag.p3d";
-        picture = "\SWLW_clones\machineguns\Z7\data\ui\SWLW_Z7_mag_ui.paa";
+        model = "\ls\core\addons\weapons_zseries\z7\ls_magazine_z7.p3d";
+        picture = "\ls\core\addons\weapons_zseries\data\ui\z7_mag_ui_ca.paa";
 
         allowedSlots[] = {TYPE_BACKPACK};
 
-        initSpeed = 200;
+        initSpeed = 900;
         type = AMMO_USAGE_ARMORED_VEHICLES;
 
         ammo = QCLASS(Bullet_Plasma_Z7_Red);

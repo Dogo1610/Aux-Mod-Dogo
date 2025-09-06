@@ -2,12 +2,6 @@ class CfgWeapons {
     class LMG_Mk200_F;
     class JLTS_Z6: LMG_Mk200_F {
         class manual;
-        class Overcharge;
-        class close;
-        class medium;
-        class short;
-        class far_optic1;
-        class far_optic2;
     };
     class CLASS(Z6_Base): JLTS_Z6 {
         SCOPE_PRIVATE;
@@ -18,8 +12,10 @@ class CfgWeapons {
 
         modes[] = {"manual","Overcharge","close","short","medium","far_optic1","far_optic2"};
         muzzles[] = {"this"};
-        magazines[] = {QCLASS(Mag_400Rnd_Z6), QCLASS(Mag_400Rnd_Z6_Red), "Aux12thFleet_Mag_Z6"};
+        magazines[] = {QCLASS(Mag_400Rnd_Z6), QCLASS(Mag_400Rnd_Z6_Red), QCLASS(Mag_400Rnd_Z6_Yellow), "Aux12thFleet_Mag_Z6"};
         magazineWell[] = {};
+
+        WBK_UseHeavyWeaponFramework = "True";
 
         recoil = "recoil_lim";
 

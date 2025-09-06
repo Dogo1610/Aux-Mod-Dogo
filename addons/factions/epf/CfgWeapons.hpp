@@ -1,6 +1,6 @@
 class CfgWeapons {
-    class ls_redforHelmet_base;
-    class CLASS(OPFOR_Helmet_Base): ls_redforHelmet_base {
+    class ls_helmet_base;
+    class CLASS(OPFOR_Helmet_Base): ls_helmet_base {
         class ItemInfo;
     };
     class CLASS(EPF_Helmet): CLASS(OPFOR_Helmet_Base) {
@@ -66,7 +66,7 @@ class CfgWeapons {
         };
     };
 
-class CLASS(EPF_Helmet_Pilot): CLASS(EPF_Helmet) {
+    class CLASS(EPF_Helmet_Pilot): CLASS(EPF_Helmet) {
         displayName = "[EPF] Pilot Helmet";
 
         model = "\sc_equipment\data\ronin\ro_helmet.p3d";
@@ -74,6 +74,18 @@ class CLASS(EPF_Helmet_Pilot): CLASS(EPF_Helmet) {
 
         class ItemInfo: ItemInfo {
             uniformModel = "\sc_equipment\data\ronin\ro_helmet.p3d";
+        };
+    };
+
+    class CLASS(EPF_Helmet_Guard): CLASS(EPF_Helmet) {
+        displayName = "[EPF] Guard Helmet";
+
+        model = "MDF\MDFHelmet.p3d";
+        hiddenSelections[] = {"camo"};
+        hiddenSelectionsTextures[] = {"MDFEA_Equipment\Helmet\MDF_Helm_OD.paa"};
+
+        class ItemInfo: ItemInfo {
+            uniformModel = "MDF\MDFHelmet.p3d";
         };
     };
 
@@ -98,8 +110,8 @@ class CLASS(EPF_Helmet_Pilot): CLASS(EPF_Helmet) {
         picture = "\A3\Characters_F_AoW\Headgear\Data\UI\icon_H_ParadeDressCap_01_AAF_F_CA.paa";
     };
 
-    class ls_redforUniform_base;
-    class CLASS(OPFOR_Uniform_Base): ls_redforUniform_base {
+    class ls_uniform_base;
+    class CLASS(OPFOR_Uniform_Base): ls_uniform_base {
         class ItemInfo;
     };
     class CLASS(EPF_Uniform): CLASS(OPFOR_Uniform_Base) {
@@ -126,8 +138,8 @@ class CLASS(EPF_Helmet_Pilot): CLASS(EPF_Helmet) {
         };
     };
 
-    class ls_redforVest_base;
-    class CLASS(OPFOR_Vest_Base): ls_redforVest_base {
+    class ls_vest_base;
+    class CLASS(OPFOR_Vest_Base): ls_vest_base {
         class ItemInfo;
     };
     class CLASS(EPF_Vest): CLASS(OPFOR_Vest_Base) {
@@ -204,6 +216,25 @@ class CLASS(EPF_Helmet_Pilot): CLASS(EPF_Helmet) {
         class ItemInfo: ItemInfo {
             hiddenSelections[] = {"camo", "camo1"};
             uniformModel = "\sc_equipment\data\samurai\sam_vest_light.p3d";
+        };
+    };
+
+    class CLASS(EPF_Vest_Guard): CLASS(EPF_Vest) {
+        displayName = "[EPF] Guard Vest";
+        descriptionShort = "Armor Level V";
+
+        model = "MDF\MDFHeavy.p3d";
+        hiddenSelections[] = {"camo","camo1"};
+        hiddenSelectionsTextures[] = {
+            "MDFEA_Equipment\Vest\MDF_Torso_OD.paa",
+            "MDFEA_Equipment\Legs\MDF_Legs_OD.paa"
+            };
+
+        class ItemInfo: ItemInfo {
+            hiddenSelections[] = {"camo","camo1"};
+            uniformModel = "MDF\MDFHeavy.p3d";
+
+            SC_VEST_HITPOINTS_HEAVY;
         };
     };
 };

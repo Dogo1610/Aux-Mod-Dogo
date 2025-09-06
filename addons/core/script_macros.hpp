@@ -22,8 +22,8 @@
 #ifdef DISABLE_COMPILE_CACHE
     #define LINKFUNC(x) {_this call FUNC(x)}
     #define PREP(fncName) DFUNC(fncName) = compile preprocessFileLineNumbers QPATHTOF(functions\DOUBLES(fnc,fncName).sqf)
-    #define PREP_RECOMPILE_START    if (isNil "ACE_PREP_RECOMPILE") then {ACE_RECOMPILES = []; ACE_PREP_RECOMPILE = {{call _x} forEach ACE_RECOMPILES;}}; private _recomp = {
-    #define PREP_RECOMPILE_END      }; call _recomp; ACE_RECOMPILES pushBack _recomp;
+    #define PREP_RECOMPILE_START    if (isNil "ACE_PREP_RECOMPILE") then {ACE_recompiles = []; ACE_PREP_recompile = {{call _x} forEach ACE_recompiles;}}; private _recomp = {
+    #define PREP_RECOMPILE_END      }; call _recomp; ACE_recompiles pushBack _recomp;
 #else
     #define LINKFUNC(x) FUNC(x)
     #define PREP(fncName) [QPATHTOF(functions\DOUBLES(fnc,fncName).sqf), QFUNC(fncName)] call CBA_fnc_compileFunction
@@ -203,7 +203,7 @@ ace_hearing_protection = 0.85
 #define GET_NAME(var1) [var1, false, true] call ace_common_fnc_getName
 
 // These are defined here so multiple addons can define jetpack properties easily
-#define JETPACK_FUEL_DEFAULT 100
+#define JETPACK_FUEL_DEFAULT 300
 #define JETPACK_SPEED_DEFAULT 4
 #define JETPACK_STRENGTH_DEFAULT 15
 

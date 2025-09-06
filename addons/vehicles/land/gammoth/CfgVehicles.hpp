@@ -56,6 +56,8 @@ class CfgVehicles {
 
         displayName = "Gammoth Transport";
         editorPreview = EEDITOR_PREVIEW(vehicles\land\gammoth,Gammoth_Transport);
+
+        INVENTORY_VEHICLE_GAMTRANS(2);
     };
 
     class CLASS(Gammoth_Covered): CLASS(Gammoth_base) {
@@ -95,6 +97,8 @@ class CfgVehicles {
                 };
             };
         };
+
+        INVENTORY_VEHICLE_GAMTRANS(2);
     };
 
     class CLASS(Gammoth_Ammo): CLASS(Gammoth_base) {
@@ -103,7 +107,7 @@ class CfgVehicles {
         displayName = "Gammoth Ammo Truck";
         editorPreview = EEDITOR_PREVIEW(vehicles\land\gammoth,Gammoth_Ammo);
 
-        ace_cargo_space = 8;
+        ace_cargo_space = 9;
         ace_rearm_defaultSupply = 1200;
         supplyRadius = 10;
         transportAmmo = 0;
@@ -145,6 +149,8 @@ class CfgVehicles {
                 };
             };
         };
+
+        INVENTORY_VEHICLE_GAMAMMO(2);
     };
 
     class CLASS(Gammoth_Medical): CLASS(Gammoth_base) {
@@ -191,6 +197,8 @@ class CfgVehicles {
                 };
             };
         };
+
+        INVENTORY_VEHICLE_GAMMED(2);
     };
 
     class CLASS(Gammoth_Repair): CLASS(Gammoth_base) {
@@ -248,6 +256,7 @@ class CfgVehicles {
         ace_refuel_fuelCargo = 10000;
         ace_refuel_hooks[] = {{1.3, -1.59, -0.62}, {-1.16, -1.59, -0.62}};
 
+
         supplyRadius = 10;
         transportSoldier = 1;
         transportFuel = 0;
@@ -259,6 +268,7 @@ class CfgVehicles {
 
         model = "\A3\Soft_F_EPC\Truck_03\Truck_03_fuel_F.p3d";
         picture = "\A3\Soft_F_EPC\Truck_03\Data\UI\truck_03_fuel_CA.paa";
+        hiddenSelections[] = {"Camo1","Camo2","Camo3"};
         icon = "\A3\Soft_F_EPC\Truck_03\Data\UI\map_Truck_03_Fuel_CA.paa";
         mapSize = 11.07;
 
@@ -285,6 +295,8 @@ class CfgVehicles {
                 };
             };
         };
+
+        INVENTORY_VEHICLE_GAMFUEL(2);
     };
 
     class CLASS(Gammoth_Device): CLASS(Gammoth_base) {
@@ -297,6 +309,7 @@ class CfgVehicles {
         aggregateReflectors[] = {{"Left", "Right", "Left2", "Right2"}, {"Light_1"}};
 
         transportSoldier = 1;
+
 
         model = "\A3\Soft_F_EPC\Truck_03\Truck_03_device_F.p3d";
         hiddenSelections[] = {"Camo1", "Camo2", "Camo3", "Camo4", "Camo5"};
