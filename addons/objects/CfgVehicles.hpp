@@ -182,7 +182,7 @@ class CfgVehicles {
     };
 
     class 3AS_T_Screen;
-    class CLASS(AIRSpawer): 3AS_T_Screen{
+    class CLASS(AIRSpawner): 3AS_T_Screen{
     SCOPE_PUBLIC;
     author = AUTHOR;
 
@@ -284,10 +284,9 @@ class CfgVehicles {
 				position = "pos cano";
 				radius = 15;
                 condition = "[ace_player, 'pilot', 2] call ls_common_fnc_getSkill";
-				statement = QUOTE([ARR_2(this,'BNA_KC_BLTB_Ywing')] call FUNC(VicSpawner));
+				statement = QUOTE([ARR_2(this,'BNA_KC_BTLB_Ywing')] call FUNC(VicSpawner));
 				onlyforplayer = "false";
 				hideOnUse = 0;
-            };
             class Spawn_KC_Gozanti
             {
                 displayName = "<t color='#2ed9ca'> Spawn [KC] Gozanti </t>";
