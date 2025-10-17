@@ -27,8 +27,8 @@ class CfgVehicles {
         fuelCapacity = 300000;
         fuelConsumptionRate = 0.12;
         vehicleClass = "Helicopter";
-
-
+        extCameraPosition[] = { 0, 170, -1000 };  // X Z Y
+        simulation = "helicopterx";
 
         model = "\ls\core\addons\props_staticships\venator\ls_venator_zeus.p3d";
 
@@ -102,6 +102,111 @@ class CfgVehicles {
                 };
             };
         };
+
+    	class HitPoints
+		{
+			class HitHull
+			{
+				armor=999;
+				convexComponent="hull_hit";
+				depends="Total";
+				explosionShielding=1;
+				material=51;
+				name="hull_hit";
+				passThrough=1;
+				visual="zbytek";
+				radius=0.0099999998;
+			};
+			class HitFuel
+			{
+				convexcomponent="engine_hit";
+				hitpoint="engine_hit";
+				name="engine_hit";
+				explosionShielding=2;
+				radius=0.1;
+				visual="";
+				passthrough=0.1;
+				minimalhit=0.1;
+				material=-1;
+				armor=0.60000002;
+			};
+			class HitEngine
+			{
+				armor=0.5;
+				convexComponent="engine_hit";
+				explosionShielding=2;
+				material=51;
+				name="engine_hit";
+				hitpoint="engine_hit";
+				passThrough=1;
+				visual="";
+				radius=0.2;
+			};
+			class HitHRotor
+			{
+				armor=3;
+				convexComponent="main_rotor_hit";
+				explosionShielding=2.5;
+				material=51;
+				name="main_rotor_hit";
+				passThrough=0.1;
+				visual="";
+				radius=0.0099999998;
+			};
+			class HitVRotor
+			{
+				armor=3;
+				convexComponent="tail_rotor_hit";
+				explosionShielding=6;
+				material=51;
+				name="tail_rotor_hit";
+				passThrough=0.30000001;
+				visual="";
+				radius=0.0099999998;
+			};
+			class HitAvionics
+			{
+				armor=2;
+				convexComponent="avionics_hit";
+				explosionShielding=5;
+				material=51;
+				name="avionics_hit";
+				passThrough=1;
+				visual="";
+				radius=0.5;
+			};
+			class HitGlass1
+			{
+				armor=2;
+				name="HitGlass1";
+				radius=0.40000001;
+				visual="";
+				passThrough=1;
+				explosionShielding=3;
+			};
+			class HitGlass2
+			{
+				armor=2;
+				name="HitGlass2";
+				radius=0.40000001;
+				visual="";
+				passThrough=1;
+				explosionShielding=3;
+			};
+			class HitGlass3
+			{
+				armor=2;
+				name="HitGlass3";
+				radius=0.40000001;
+				visual="";
+				passThrough=1;
+				explosionShielding=3;
+			};
+		};
+        driveOnComponent[]=
+		{
+			"Skids"
+		};
 
 
 
