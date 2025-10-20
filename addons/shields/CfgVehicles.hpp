@@ -169,6 +169,36 @@ class CfgVehicles {
         };
     };
 
+    class Heli_Attack_01_base_F;
+	class 3AS_Patrol_LAAT_Base: Heli_Attack_01_base_F {};
+    class 3AS_Patrol_LAAT_Republic: 3AS_Patrol_LAAT_Base {
+        class ACE_SelfActions;
+        class ACE_Actions;
+    };
+    class CLASS(LAATLE_Base): 3AS_Patrol_LAAT_Republic {
+        GVAR(hasShield) = TRUE;
+        GVAR(health) = 2;
+        GVAR(regenDelay) = SHIELD_REGEN_DELAY_DEFAULT;
+        GVAR(regenAmount) = SHIELD_REGEN_AMOUNT_DEFAULT;
+
+        class ACE_Actions: ACE_Actions {
+            class RechargeShield {
+                displayName = "Recharge Shield: %1";
+                position = "[0, -4, 0.4]";
+                distance = 5;
+
+                condition = QUOTE([ARR_2(_this#0,_this#1)] call FUNC(canExternalRecharge));
+                statement = QUOTE([ARR_2(_this#0,_this#1)] call FUNC(externalRecharge));
+                modifierFunction = QUOTE(_this call FUNC(modifyInteraction));
+            };
+        };
+
+        class ACE_SelfActions: ACE_SelfActions {
+            SHIELD_TOGGLE;
+        };
+    };
+
+
     class 3AS_Nu_Base_F;
     class 3AS_Nu_REP_F: 3AS_Nu_Base_F {
         class ACE_Actions;

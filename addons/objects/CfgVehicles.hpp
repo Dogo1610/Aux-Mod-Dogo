@@ -208,6 +208,16 @@ class CfgVehicles {
 				onlyforplayer = "false";
 				hideOnUse = 0;
             };
+            class Spawn_KC_LAAT_LE
+            {
+                displayName = "Spawn [KC] LAAT/LE";
+				position = "pos cano";
+				radius = 15;
+                condition = "True";
+				statement = QUOTE([ARR_2(this,'BNA_KC_LAATLE_Republic')] call FUNC(VicSpawner));
+				onlyforplayer = "false";
+				hideOnUse = 0;
+            };
             // basic fighters
             class Spawn_KC_V19
             {
@@ -269,7 +279,7 @@ class CfgVehicles {
 				position = "pos cano";
 				radius = 15;
                 condition = "True";
-				statement = QUOTE([ARR_2(this,'BNA_KC_BLTB_Ywing')] call FUNC(VicSpawner));
+				statement = QUOTE([ARR_2(this,'BNA_KC_BTLB_Ywing')] call FUNC(VicSpawner));
 				onlyforplayer = "false";
 				hideOnUse = 0;
             };
