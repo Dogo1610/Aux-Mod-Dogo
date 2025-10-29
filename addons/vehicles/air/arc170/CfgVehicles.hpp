@@ -8,6 +8,9 @@ class CfgVehicles {
             class LaserPilot;
         };
         class PilotCamera;
+        class Components {
+           class TransportPylonsComponent;
+        };
     };
     class CLASS(ARC170): 3AS_ARC_170_Base {
         SCOPE_PUBLIC;
@@ -148,6 +151,85 @@ class CfgVehicles {
 
             maxXRotSpeed = 0.3;
             maxYRotSpeed = 0.3;
+        };
+		class Components: Components
+		{
+			class TransportPylonsComponent: TransportPylonsComponent
+			{
+				UIPicture="3as\3AS_ARC170\data\ui\pylon_arc.paa";
+				class pylons
+				{
+					class pylons1
+					{
+						hardpoints[]=
+						{
+							"B_AMRAAM_D_RAIL",
+                            "B_AMRAAM_D_DUAL_RAIL",
+							"B_AGM65_RAIL",
+							"B_AGM65_DUAL_RAIL",
+							"B_HARM_RAIL",
+							"ARC_AGM_PYLON",
+                            "B_BOMB_PYLON",
+                            QCLASS(Pylon_Gunpods)
+						};
+						attachment="PylonRack_Missile_BIM9X_x2";
+						priority=10;
+						maxweight=3000;
+						UIposition[]={0.5,0.25};
+					};
+					class pylons2: pylons1
+					{
+						UIposition[]={0.15000001,0.25};
+						mirroredMissilePos=1;
+					};
+					class pylons3: pylons1
+					{
+						hardpoints[]=
+						{
+							"B_AMRAAM_D_RAIL",
+                            "B_AMRAAM_D_DUAL_RAIL",
+							"B_AGM65_RAIL",
+							"B_AGM65_DUAL_RAIL",
+							"B_HARM_RAIL",
+							"ARC_AGM_PYLON",
+                            "B_BOMB_PYLON",
+                            QCLASS(Pylon_Gunpods)
+						};
+						attachment="PylonMissile_1Rnd_Bomb_04_F";
+						priority=9;
+						maxweight=5000;
+						UIposition[]={0.55000001,0.34999999};
+					};
+					class pylons4: pylons3
+					{
+						UIposition[]={0.1,0.34999999};
+						mirroredMissilePos=3;
+					};
+					class pylons5: pylons1
+					{
+						hardpoints[]=
+						{
+							"B_AMRAAM_D_RAIL",
+                            "B_AMRAAM_D_DUAL_RAIL",
+							"B_AGM65_RAIL",
+							"B_AGM65_DUAL_RAIL",
+							"B_HARM_RAIL",
+							"ARC_AGM_PYLON",
+                            "B_BOMB_PYLON",
+                            QCLASS(Pylon_Gunpods)
+						};
+						attachment="PylonRack_Missile_AMRAAM_D_x1";
+						priority=7;
+						maxweight=5000;
+						UIposition[]={0.60000002,0.44999999};
+					};
+					class pylons6: pylons5
+					{
+						UIposition[]={0.050000001,0.44999999};
+						mirroredMissilePos=5;
+					};
+				};
+            };
         };
     };
 };

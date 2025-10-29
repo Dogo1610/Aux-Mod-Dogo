@@ -7,6 +7,9 @@ class CfgVehicles {
         class AnimationSources;
         class Turrets;
         class pilotCamera;
+        class Components {
+           class TransportPylonsComponent;
+        };
     };
     class CLASS(LAATi_Base): 3AS_LAAT_Base {
         class LS_Impulsor: ls_impulsor_base{
@@ -270,7 +273,57 @@ class CfgVehicles {
 
             ace_missileguidance_usePilotCameraForTargeting = TRUE;
         };
+        class Components: Components {
+            class TransportPylonsComponent: TransportPylonsComponent {
+				UIPicture="3as\3AS_LAAT\LAATI\data\ui\pylon_laat.paa";
+				class pylons
+				{
+					class pylons1
+					{
+						hardpoints[]=
+						{
+							"B_BIM9X_DUAL_RAIL",
+							"B_AMRAAM_D_RAIL",
+							"B_AMRAAM_D_DUAL_RAIL",
+							"B_AGM65_RAIL",
+							"B_AGM65_DUAL_RAIL",
+                            QCLASS(Pylon_Gunpods)
+						};
+						attachment="3AS_PylonMissile_1Rnd_High_Energy_Missile";
+						priority=10;
+						maxweight=3000;
+						UIposition[]={0.5,0.25};
+					};
+					class pylons2: pylons1
+					{
+						UIposition[]={0.15000001,0.25};
+						mirroredMissilePos=1;
+					};
+					class pylons3: pylons1
+					{
+						hardpoints[]=
+						{
+							"B_AMRAAM_D_RAIL",
+							"B_AMRAAM_D_DUAL_RAIL",
+							"B_AGM65_RAIL",
+							"B_AGM65_DUAL_RAIL",
+                            QCLASS(Pylon_Gunpods)
+						};
+						attachment="3AS_PylonMissile_1Rnd_Concussion_Missile";
+						priority=9;
+						maxweight=2500;
+						UIposition[]={0.55000001,0.34999999};
+					};
+					class pylons4: pylons3
+					{
+					    UIposition[]={0.1,0.34999999};
+					    mirroredMissilePos=3;
+				    };
+			    };
+            };
+        };
     };
+
 
     class CLASS(LAATi_MK1): CLASS(LAATi_Base) {
         SCOPE_PUBLIC;

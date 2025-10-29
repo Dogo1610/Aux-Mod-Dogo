@@ -112,4 +112,7 @@ class CfgAmmo {
     class CLASS(Shell_Mortar_SmokeRed_Submunition): SmokeShellArty {
         effectsSmoke = QCLASS(Effects_Mortar_SmokeShellRed);
     };
+
+
+
 };

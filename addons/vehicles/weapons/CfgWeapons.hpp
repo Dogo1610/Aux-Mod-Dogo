@@ -266,7 +266,11 @@ class CfgWeapons {
         displayName = "Point Defense Turret";
     };
 
-    class Cannon_30mm_Plane_CAS_02_F;
+
+    class Cannon_30mm_Plane_CAS_02_F: CannonCore {
+        class medium;
+    };
+
     class 3AS_ARC_Light_Canon: Cannon_30mm_Plane_CAS_02_F {
         class LowROF;
     };
@@ -456,6 +460,21 @@ class CfgWeapons {
         class Burst3: Burst3 {
             artilleryCharge = M190_RANGE_FAR;
             reloadTime = 4;
+        };
+    };
+
+
+    class CLASS(PylonGunpod): Cannon_30mm_Plane_CAS_02_F
+    {
+        displayName = "[KC] Gunpod";
+        magazines[]=
+        {
+            QCLASS(PylonGunpod_1000rnd)
+        };
+        class medium: medium {
+            class StandardSound {
+                soundSetShot[] = {QCLASS(SoundSet_MachineGun_PylonGunpod_Shot)};
+            };
         };
     };
 };

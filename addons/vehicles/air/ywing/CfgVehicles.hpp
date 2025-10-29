@@ -6,6 +6,9 @@ class CfgVehicles {
             class BubbleGun;
         };
         class PilotCamera;
+        class Components {
+           class TransportPylonsComponent;
+        };
     };
     class CLASS(BTLB_YWing): BTL_Base {
         SCOPE_PUBLIC;
@@ -83,6 +86,74 @@ class CfgVehicles {
             minTurn = -180;
             maxElev = 90;
             minElev = -10;
+        };
+
+        class Components: Components
+        {
+            class TransportPylonsComponent: TransportPylonsComponent
+            {
+				UIPicture="3as\3AS_BTLB\data\ui\pylon_ywing.paa";
+				class pylons
+				{
+					class pylons1
+					{
+						hardpoints[]=
+						{
+							"B_BOMB_PYLON",
+							"ARC_EMP_RAIL",
+							"B_SDB_QUAD_RAIL",
+                            "RD501_Republic_Aircraft_Laser_Repeater_Pylon",
+                            "RD501_Republic_Aircraft_Laser_Turbo_Pylon",
+                            QCLASS(Pylon_Gunpods)
+						};
+						attachment="PylonRack_Bomb_SDB_x4";
+						priority=10;
+						maxweight=25000;
+						UIposition[]={0.5,0.25};
+					};
+					class pylons2: pylons1
+					{
+						UIposition[]={0.15000001,0.25};
+						mirroredMissilePos=1;
+					};
+					class pylons3: pylons1
+					{
+						attachment="PylonRack_Bomb_SDB_x4";
+						priority=7;
+						maxweight=25000;
+						UIposition[]={0.55000001,0.34999999};
+					};
+					class pylons4: pylons3
+					{
+						UIposition[]={0.1,0.34999999};
+						mirroredMissilePos=3;
+					};
+					class pylons5: pylons1
+					{
+						attachment="PylonRack_Missile_AGM_02_x2";
+						priority=9;
+						maxweight=50000;
+						UIposition[]={0.60000002,0.44999999};
+					};
+					class pylons6: pylons5
+					{
+						UIposition[]={0.050000001,0.44999999};
+						mirroredMissilePos=5;
+					};
+					class pylons7: pylons1
+					{
+						attachment="PylonRack_Bomb_SDB_x4";
+						priority=5;
+						maxweight=25000;
+						UIposition[]={0.44999999,0.40000001};
+					};
+					class pylons8: pylons3
+					{
+						UIposition[]={0.2,0.40000001};
+						mirroredMissilePos=7;
+					};
+				};
+			};
         };
     };
 };

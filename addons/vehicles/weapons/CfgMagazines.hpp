@@ -104,4 +104,24 @@ class CfgMagazines {
         ammo = QCLASS(Shell_Mortar_SmokeRed);
     };
     CSW_MAG_CONVERSION(CLASS(Mag_6Rnd_Mortar_SmokeRed));
+
+    class 1000Rnd_Gatling_30mm_Plane_CAS_01_F;
+    class CLASS(PylonGunpod_1000rnd) : 1000Rnd_Gatling_30mm_Plane_CAS_01_F
+    {
+        SCOPE_PUBLIC;
+        ammo = "Gatling_30mm_HE_Plane_CAS_01_F";
+		displayName	= "[KC] Gunpod";
+		count		= 1000;
+		pylonWeapon	= QCLASS(PylonGunpod);
+        hardpoints[] = {
+            QCLASS(Pylon_Gunpods)
+        };
+    	model = "\A3\Weapons_F\DynamicLoadout\PylonPod_Twin_Cannon_20mm.p3d";
+	    muzzlePos = "muzzlePos";
+    	muzzleEnd = "muzzleEnd";
+        mass = 0;
+        descriptionShort = "High speed Weapon";
+	};
+
+
 };
