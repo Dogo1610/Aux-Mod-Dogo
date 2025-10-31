@@ -105,11 +105,11 @@ class CfgMagazines {
     };
     CSW_MAG_CONVERSION(CLASS(Mag_6Rnd_Mortar_SmokeRed));
 
-    class 1000Rnd_Gatling_30mm_Plane_CAS_01_F;
-    class CLASS(PylonGunpod_1000rnd) : 1000Rnd_Gatling_30mm_Plane_CAS_01_F
+    class 3AS_1000Rnd_Jug_AutoCannon_Mag;
+    class CLASS(PylonGunpod_1000rnd) : 3AS_1000Rnd_Jug_AutoCannon_Mag
     {
         SCOPE_PUBLIC;
-        ammo = "Gatling_30mm_HE_Plane_CAS_01_F";
+        ammo = QCLASS(Gunpod_Ammo);
 		displayName	= "[KC] Gunpod";
 		count		= 1000;
 		pylonWeapon	= QCLASS(PylonGunpod);

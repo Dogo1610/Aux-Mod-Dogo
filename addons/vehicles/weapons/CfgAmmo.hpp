@@ -113,6 +113,14 @@ class CfgAmmo {
         effectsSmoke = QCLASS(Effects_Mortar_SmokeShellRed);
     };
 
-
+	class 3as_Jug_AutoCannon_Ammo;
+    class CLASS(Gunpod_Ammo): 3as_Jug_AutoCannon_Ammo
+    {
+		hit=200;
+		indirectHit=76;
+		indirectHitRange=0.75;
+		explosive=0.40000001;
+		caliber=35;
+    };
 
 };

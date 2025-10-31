@@ -40,7 +40,4 @@ class CfgSoundSets {
         soundShaders[] = {QCLASS(SoundShader_MachineGun_Hornet_Shot)};
     };
 
-    class CLASS(SoundSet_MachineGun_PylonGunpod_Shot): CLASS(SoundSet_VehicleWeapon_Base) {
-        soundShaders[] = {QCLASS(SoundShader_MachineGun_PylonGunpod_Shot)};
-    };
 };

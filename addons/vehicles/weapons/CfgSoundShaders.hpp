@@ -25,9 +25,4 @@ class CfgSoundShaders {
         };
     };
 
-    class CLASS(SoundShader_MachineGun_PylonGunpod_Shot): CLASS(SoundShader_VehicleWeapon_Base) {
-        samples[] = {
-            {"A3\Sounds_F\arsenal\weapons_vehicles\gatling_30mm\30mm_01_burst", 1}
-        };
-    };
 };
