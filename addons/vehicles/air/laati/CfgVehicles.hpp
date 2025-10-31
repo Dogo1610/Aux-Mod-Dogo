@@ -310,7 +310,7 @@ class CfgVehicles {
                             QCLASS(Pylon_Gunpods)
 						};
 						attachment="3AS_PylonMissile_1Rnd_Concussion_Missile";
-						priority=9;
+						priority=10;
 						maxweight=2500;
 						UIposition[]={0.55000001,0.34999999};
 					};

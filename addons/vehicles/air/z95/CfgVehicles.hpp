@@ -66,7 +66,7 @@ class CfgVehicles {
                             QCLASS(Pylon_Gunpods)
 						};
 						attachment="PylonRack_Missile_BIM9X_x1";
-						priority=10;
+						priority=5;
 						maxweight=300;
 						UIposition[]={0.60000002,0.44999999};
 					};
@@ -90,7 +90,7 @@ class CfgVehicles {
                             QCLASS(Pylon_Gunpods)
 						};
 						attachment="3AS_PylonRack_ARC_6Rnd_Missile_AGM";
-						priority=9;
+						priority=5;
 						maxweight=2500;
 						UIposition[]={0.55000001,0.34999999};
 					};
@@ -114,7 +114,7 @@ class CfgVehicles {
                             QCLASS(Pylon_Gunpods)
 						};
 						attachment="PylonRack_Missile_AMRAAM_D_x1";
-						priority=7;
+						priority=5;
 						maxweight=5000;
 						UIposition[]={0.5,0.25};
 					};
